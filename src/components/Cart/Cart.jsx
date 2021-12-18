@@ -2,6 +2,7 @@ import React from "react";
 import useStyles from "./styles";
 import { Container, Typography, Button, Grid } from "@material-ui/core";
 import CartItem from "./CartItem/CartItem";
+import { Link } from "react-router-dom";
 
 const Cart = ({
   cart,
@@ -48,6 +49,8 @@ const Cart = ({
           </Button>
           <Button
             className={classes.checkoutButton}
+            component={Link}
+            to="/checkout"
             size="large"
             type="button"
             variant="contained"
